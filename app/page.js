@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import Navbar from "@/components/navbar";
 
 function Page() {
   const [pdfOpen, setPdfOpen] = useState(false);
@@ -56,7 +55,6 @@ function Page() {
 
   return (
     <div className="flex flex-wrap justify-center h-full bg-slate-400 ">
-      <Navbar />
       {videosList.map((video) => (
         <Link key={video.href} href={video.href}>
           <video
