@@ -53,7 +53,9 @@ function Navbar() {
   return (
     <div className="w-full flex flex-col md:flex-row">
       <div className="w-full md:w-1/2 text-2xl md:text-4xl flex justify-center h-[7vh] bg-slate-700 items-center">
-        <h1 className="text-white font-bold">My Projects</h1>
+        <h1 className="text-white font-bold">
+          <Link href="/">My Projects</Link>
+        </h1>
       </div>
       <div className=" w-full md:w-1/2 relative">
         <ul className="flex flex-row place-content-evenly items-center h-[7vh]">
