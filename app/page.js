@@ -44,7 +44,7 @@ function Page() {
   ];
 
   return (
-    <div className="flex flex-wrap  justify-center h-full bg-slate-400 ">
+    <div className="flex flex-wrap scroll-smooth justify-center h-full bg-slate-400 ">
       {videosList.map((video) => (
         <Link key={video.href} href={video.href}>
           <video
@@ -52,7 +52,7 @@ function Page() {
             autoPlay={true}
             loop={true}
             muted
-            className=" h-[30vh] sm:h-[35vh]  hover:ease-in-out duration-300 hover:scale-110 hover:border-2 m-1 rounded border-neutral-200"
+            className=" h-[30vh] sm:h-[35vh]  hover:ease-in-out duration-300 hover:scale-110 hover:border-2 m-1 rounded border-cyan-200"
             src={video.src}
           />
         </Link>
