@@ -1,8 +1,18 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { ThreeBody } from "@uiball/loaders";
 
 function Page() {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    // Simulate a loading delay
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
   const handleClick = (event, url) => {
     event.preventDefault();
     window.open(url, "_blank");
@@ -45,18 +55,22 @@ function Page() {
 
   return (
     <div className="flex flex-wrap scroll-smooth justify-center h-full bg-slate-400 ">
-      {videosList.map((video) => (
-        <Link key={video.href} href={video.href}>
-          <video
-            onClick={(event) => handleClick(event, video.href)}
-            autoPlay={true}
-            loop={true}
-            muted
-            className=" h-[30vh] sm:h-[35vh]  hover:ease-in-out duration-300 hover:scale-110 hover:border-2 m-1 rounded border-cyan-200"
-            src={video.src}
-          />
-        </Link>
-      ))}
+      {loading ? (
+        <ThreeBody size={35} speed={0.9} color="#F2E5E3" />
+      ) : (
+        videosList.map((video) => (
+          <Link key={video.href} href={video.href}>
+            <video
+              onClick={(event) => handleClick(event, video.href)}
+              autoPlay={true}
+              loop={true}
+              muted
+              className=" h-[30vh] sm:h-[35vh]  hover:ease-in-out duration-300 hover:scale-110 hover:border-2 m-1 rounded border-cyan-200"
+              src={video.src}
+            />
+          </Link>
+        ))
+      )}
     </div>
     //   <div className="text-center text-6xl pt-44 bg-slate-400 h-[100vh] bg-cover bottom-0 bg">
     //   {"<<<"}CONTENT{">>>"} <br />
