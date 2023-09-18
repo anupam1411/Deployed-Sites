@@ -44,19 +44,21 @@ function Page() {
   ];
 
   return (
-    <div className="flex flex-wrap scroll-smooth justify-center h-full bg-slate-400 ">
-      {videosList.map((video) => (
-        <Link key={video.href} href={video.href}>
-          <video
-            onClick={(event) => handleClick(event, video.href)}
-            autoPlay={true}
-            loop={true}
-            muted
-            className=" h-[30vh] sm:h-[35vh]  hover:ease-in-out duration-300 hover:scale-110 hover:border-2 m-1 rounded border-cyan-200"
-            src={video.src}
-          />
-        </Link>
-      ))}
+    <div className="h-full">
+      <div className="flex flex-wrap scroll-smooth justify-center bg-slate-400 ">
+        {videosList.map((video) => (
+          <Link key={video.href} href={video.href}>
+            <video
+              onClick={(event) => handleClick(event, video.href)}
+              autoPlay={true}
+              loop={true}
+              muted
+              className=" h-[30vh] sm:h-[35vh] hover: hover:ease-in-out duration-300 hover:scale-110 hover:border-2 m-[1vh] rounded border-cyan-200"
+              src={video.src}
+            />
+          </Link>
+        ))}
+      </div>
     </div>
     //   <div className="text-center text-6xl pt-44 bg-slate-400 h-[100vh] bg-cover bottom-0 bg">
     //   {"<<<"}CONTENT{">>>"} <br />
