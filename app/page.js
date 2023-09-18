@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ThreeBody } from "@uiball/loaders";
 
 function Page() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Simulate a loading delay
@@ -55,11 +55,13 @@ function Page() {
 
   return (
     <div className="flex flex-wrap scroll-smooth justify-center h-full bg-slate-400 ">
-      {loading ? (
-        <ThreeBody size={35} speed={0.9} color="#F2E5E3" />
-      ) : (
-        videosList.map((video) => (
-          <Link key={video.href} href={video.href}>
+      {videosList.map((video) => (
+        <Link key={video.href} href={video.href}>
+          {loading ? (
+            // Render the loader while loading
+            <ThreeBody />
+          ) : (
+            // Render the video when not loading
             <video
               onClick={(event) => handleClick(event, video.href)}
               autoPlay={true}
@@ -68,9 +70,9 @@ function Page() {
               className=" h-[30vh] sm:h-[35vh]  hover:ease-in-out duration-300 hover:scale-110 hover:border-2 m-1 rounded border-cyan-200"
               src={video.src}
             />
-          </Link>
-        ))
-      )}
+          )}
+        </Link>
+      ))}
     </div>
     //   <div className="text-center text-6xl pt-44 bg-slate-400 h-[100vh] bg-cover bottom-0 bg">
     //   {"<<<"}CONTENT{">>>"} <br />
