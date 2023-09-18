@@ -7,10 +7,7 @@ function Page() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate a loading delay
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+    setLoading(false);
   }, []);
 
   const handleClick = (event, url) => {
@@ -57,20 +54,23 @@ function Page() {
     <div className="flex flex-wrap scroll-smooth justify-center h-full bg-slate-400 ">
       {videosList.map((video) => (
         <Link key={video.href} href={video.href}>
-          {loading ? (
-            // Render the loader while loading
-            <ThreeBody />
-          ) : (
-            // Render the video when not loading
+          <div className="relative">
+            {loading && (
+              <div className="absolute inset-0 flex items-center justify-center w-full h-full bg-gray-800 opacity-70">
+                <ThreeBody color="#ffffff" />
+              </div>
+            )}
             <video
               onClick={(event) => handleClick(event, video.href)}
               autoPlay={true}
               loop={true}
               muted
-              className=" h-[30vh] sm:h-[35vh]  hover:ease-in-out duration-300 hover:scale-110 hover:border-2 m-1 rounded border-cyan-200"
+              className="h-[30vh] sm:h-[35vh]  hover:ease-in-out duration-300 hover:scale-110 hover:border-2 m-1 rounded border-cyan-200"
               src={video.src}
+              onLoadStart={() => setLoading(true)}
+              onLoadedData={() => setLoading(false)}
             />
-          )}
+          </div>
         </Link>
       ))}
     </div>
