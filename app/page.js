@@ -1,64 +1,9 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import Videos from "@/components/videos";
 
 function Page() {
-  const handleClick = (event, url) => {
-    event.preventDefault();
-    window.open(url, "_blank");
-  };
-
-  const videosList = [
-    {
-      href: "https://fidget-games.netlify.app/",
-      src: "project-videos/fidget-games.mp4",
-    },
-    {
-      href: "https://anupam-group-freelance-hitachi.netlify.app/",
-      src: "project-videos/hitachi-task.mp4",
-    },
-    {
-      href: "https://khaana-peena.netlify.app/",
-      src: "project-videos/restro-site.mp4",
-    },
-    {
-      href: "https://to-d0-list-app.netlify.app/",
-      src: "project-videos/to-do-list.mp4",
-    },
-    {
-      href: "https://random-person-generatorr.netlify.app/",
-      src: "project-videos/random-person-generator.mp4",
-    },
-    {
-      href: "https://quote-generotor.netlify.app/",
-      src: "project-videos/quote-generator.mp4",
-    },
-    {
-      href: "https://bespoke-lolly-232ca0.netlify.app/",
-      src: "project-videos/password-generator.mp4",
-    },
-    {
-      href: "https://colorr-generatorr.netlify.app/",
-      src: "project-videos/color-generator.mp4",
-    },
-  ];
-
   return (
     <div className="h-full">
-      <div className="flex flex-wrap scroll-smooth justify-center bg-slate-400 ">
-        {videosList.map((video) => (
-          <Link key={video.href} href={video.href}>
-            <video
-              onClick={(event) => handleClick(event, video.href)}
-              autoPlay={true}
-              loop={true}
-              muted
-              className=" h-[30vh] sm:h-[35vh] hover: hover:ease-in-out duration-300 hover:scale-110 hover:border-2 m-[1vh] rounded border-cyan-200"
-              src={video.src}
-            />
-          </Link>
-        ))}
-      </div>
+      <Videos /> {/*IMPOERING VIDEOS AND CONTEMNT TO LANDING PAGE*/}
     </div>
     //   <div className="text-center text-6xl pt-44 bg-slate-400 h-[100vh] bg-cover bottom-0 bg">
     //   {"<<<"}CONTENT{">>>"} <br />
