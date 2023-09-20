@@ -53,99 +53,116 @@ function Navbar() {
   };
 
   return (
-    <div className="w-full flex flex-col md:flex-row">
-      <div className="w-full md:w-1/2 text-2xl md:text-4xl flex justify-center h-[7vh] bg-slate-700 items-center">
-        <h1 className="text-white text font-bold">
-          <Link href="/">My Projects</Link>
-        </h1>
-      </div>
-      <div className=" w-full md:w-1/2 relative">
-        <ul className="flex flex-row place-content-evenly items-center h-[7vh]">
-          <li>
-            <Link href="https://github.com/anupam1411" target="_blank">
-              <GitHubIcon
-                onMouseEnter={() => handleMouseEnter(setShowGitPopup)}
-                onMouseLeave={() => handleMouseLeave(setShowGitPopup)}
-                fontSize="large"
-              />
-            </Link>{" "}
-            {showGitPopup && (
-              <div className="flex justify-center absolute">
-                <GitPopup onClose={() => handleMouseLeave(setShowGitPopup)} />
-              </div>
-            )}
-          </li>
-          <li>
-            <Link
-              href="https://www.linkedin.com/in/anupam-sagar-082b33240"
-              target="_blank"
-            >
-              <LinkedInIcon
-                onMouseEnter={() => handleMouseEnter(setShowLinkedIn)}
-                onMouseLeave={() => handleMouseLeave(setShowLinkedIn)}
-                fontSize="large"
-                className="text-[#0e76a8]"
-              />
-            </Link>
-            {showLinkedIn && (
-              <div className="flex justify-center absolute">
-                <LinkedinPopup
-                  onClose={() => handleMouseLeave(setShowLinkedIn)}
+    <div>
+      <div className=" w-full flex flex-col md:flex-row">
+        <div className=" w-full md:w-1/2 text-2xl md:text-4xl flex justify-center h-[7vh] bg-slate-700 items-center">
+          <h1 className="text-white animate-rotate-y animate-once text font-bold">
+            <Link href="/">ANUPAM SAGAR</Link>
+          </h1>
+        </div>
+        <div className=" w-full md:w-1/2 relative">
+          <ul className="flex flex-row place-content-evenly items-center h-[7vh]">
+            <li>
+              <Link href="https://github.com/anupam1411" target="_blank">
+                <GitHubIcon
+                  onMouseEnter={() => handleMouseEnter(setShowGitPopup)}
+                  onMouseLeave={() => handleMouseLeave(setShowGitPopup)}
+                  fontSize="large"
                 />
+              </Link>{" "}
+              {showGitPopup && (
+                <div className="flex justify-center absolute">
+                  <GitPopup onClose={() => handleMouseLeave(setShowGitPopup)} />
+                </div>
+              )}
+            </li>
+            <li>
+              <Link
+                href="https://www.linkedin.com/in/anupam-sagar-082b33240"
+                target="_blank"
+              >
+                <LinkedInIcon
+                  onMouseEnter={() => handleMouseEnter(setShowLinkedIn)}
+                  onMouseLeave={() => handleMouseLeave(setShowLinkedIn)}
+                  fontSize="large"
+                  className="text-[#0e76a8]"
+                />
+              </Link>
+              {showLinkedIn && (
+                <div className="flex justify-center absolute">
+                  <LinkedinPopup
+                    onClose={() => handleMouseLeave(setShowLinkedIn)}
+                  />
+                </div>
+              )}
+            </li>
+            <li>
+              <TextSnippetIcon
+                onMouseEnter={() => handleMouseEnter(setShowPdfPopup)}
+                onMouseLeave={() => handleMouseLeave(setShowPdfPopup)}
+                onClick={openPdfViewer}
+                fontSize="large"
+                className=" text-[#3f51b5] "
+              />
+              <PdfViewer open={pdfOpen} onClose={closePdfViewer} />
+            </li>
+            {showPdfPopup && (
+              <div className="flex justify-center absolute">
+                <PdfPopup onClose={() => handleMouseLeave(setShowPdfPopup)} />
               </div>
             )}
-          </li>
-          <li>
-            <TextSnippetIcon
-              onMouseEnter={() => handleMouseEnter(setShowPdfPopup)}
-              onMouseLeave={() => handleMouseLeave(setShowPdfPopup)}
-              onClick={openPdfViewer}
-              fontSize="large"
-              className=" text-[#3f51b5] "
-            />
-            <PdfViewer open={pdfOpen} onClose={closePdfViewer} />
-          </li>
-          {showPdfPopup && (
-            <div className="flex justify-center absolute">
-              <PdfPopup onClose={() => handleMouseLeave(setShowPdfPopup)} />
-            </div>
-          )}
-          <li>
-            <Link href="/">
-              <CallIcon
-                fontSize="large"
-                onMouseEnter={() => handleMouseEnter(setShowPhoneNumberPopup)}
-                onMouseLeave={() => handleMouseLeave(setShowPhoneNumberPopup)}
-                onClick={copyAlert}
-                className="text-[#4caf50]"
-              />
-              {showPhoneNumberPopup && (
-                <div className="flex justify-center absolute">
-                  <PhoneNumberPopup
-                    onClose={() => handleMouseLeave(setShowPhoneNumberPopup)}
-                  />
-                </div>
-              )}
-            </Link>
-          </li>
-          <li>
-            <Link href="" onClick={openEmailInNewTab}>
-              <EmailIcon
-                onMouseEnter={() => handleMouseEnter(setShowEmailPopup)}
-                onMouseLeave={() => handleMouseLeave(setShowEmailPopup)}
-                fontSize="large"
-                className="text-[#f44336]"
-              />
-              {showEmailPopup && (
-                <div className="flex justify-center absolute">
-                  <EmailPopup
-                    onClose={() => handleMouseLeave(setShowEmailPopup)}
-                  />
-                </div>
-              )}
-            </Link>
-          </li>
-        </ul>
+            <li>
+              <Link href="/">
+                <CallIcon
+                  fontSize="large"
+                  onMouseEnter={() => handleMouseEnter(setShowPhoneNumberPopup)}
+                  onMouseLeave={() => handleMouseLeave(setShowPhoneNumberPopup)}
+                  onClick={copyAlert}
+                  className="text-[#4caf50]"
+                />
+                {showPhoneNumberPopup && (
+                  <div className="flex justify-center absolute">
+                    <PhoneNumberPopup
+                      onClose={() => handleMouseLeave(setShowPhoneNumberPopup)}
+                    />
+                  </div>
+                )}
+              </Link>
+            </li>
+            <li>
+              <Link href="" onClick={openEmailInNewTab}>
+                <EmailIcon
+                  onMouseEnter={() => handleMouseEnter(setShowEmailPopup)}
+                  onMouseLeave={() => handleMouseLeave(setShowEmailPopup)}
+                  fontSize="large"
+                  className="text-[#f44336]"
+                />
+                {showEmailPopup && (
+                  <div className="flex justify-center absolute">
+                    <EmailPopup
+                      onClose={() => handleMouseLeave(setShowEmailPopup)}
+                    />
+                  </div>
+                )}
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="BREADCRUMB   bg-slate-300">
+        <div className="flex place-content-evenly w-1/3">
+          <Link href="#home" className="home">
+            HOME
+          </Link>
+          /
+          <Link href="#about" className="about">
+            ABOUT
+          </Link>
+          /
+          <Link href="#projects" className="projects">
+            PROJECTS
+          </Link>
+        </div>
       </div>
     </div>
   );
