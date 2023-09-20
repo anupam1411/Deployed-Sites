@@ -25,7 +25,6 @@ function Page() {
               width={450} // half of
               height={100} // half of
               src="/home.gif"
-              alt="ig"
             />
           </div>
           <Link href="#projects" className="mt-4 text-xl md:text-2xl underline">
