@@ -8,6 +8,19 @@ import About from "@/components/About";
 function Page() {
   return (
     <div className="h-full bg-slate-400">
+      <div className="  flex place-content-evenly w-full md:w-1/3">
+        <Link href="#home" className="home">
+          HOME
+        </Link>
+        /
+        <Link href="#about" className="about">
+          ABOUT
+        </Link>
+        /
+        <Link href="#projects" className="projects">
+          PROJECTS
+        </Link>
+      </div>
       <div className="h-1/2 md:h-screen flex flex-col md:flex-row">
         <div className="w-full md:w-1/2 p-4">
           <div className="text-3xl pt-0 sm:pt-[30vh] md:text-5xl font-bold">
