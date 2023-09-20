@@ -150,7 +150,7 @@ function Navbar() {
         </div>
       </div>
       <div className="BREADCRUMB   bg-slate-300">
-        <div className="flex place-content-evenly w-1/3">
+        <div className="  flex place-content-evenly w-full md:w-1/3">
           <Link href="#home" className="home">
             HOME
           </Link>

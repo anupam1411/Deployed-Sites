@@ -19,7 +19,7 @@ function Page() {
           </div>
         </div>
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center p-4">
-          <div className="w-[50%]  animate-fade-up animate-once md:w-[50%]  rounded-lg ">
+          <div className="w-[50%] md:w-[50%]  rounded-lg ">
             <Image
               layout="responsive"
               width={450} // half of
