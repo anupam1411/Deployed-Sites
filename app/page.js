@@ -33,8 +33,13 @@ function Page() {
           </Link>
         </div>
       </div>
-      <About />
-      <Projects /> {/*IMPORTING VIDEOS AND CONTENT TO LANDING PAGE*/}
+      <div id="about">
+        <About />
+      </div>
+      <div id="projects">
+        <Projects />{" "}
+      </div>
+      {/*IMPORTING VIDEOS AND CONTENT TO LANDING PAGE*/}
     </div>
   );
 }
