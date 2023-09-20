@@ -24,7 +24,7 @@ function Page() {
               layout="responsive"
               width={450} // half of
               height={100} // half of
-              src="/1.gif"
+              src="/home.gif"
               alt="ig"
             />
           </div>
