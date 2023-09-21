@@ -10,7 +10,7 @@ function About() {
       <div className="flex flex-col md:flex-row bg-slate-500 rounded-md p-4 md:p-8">
         <div className="w-full md:w-1/2 mb-4 md:mb-0 md:mr-8">
           <Image
-            src="/coder.gif"
+            src="/hey.gif"
             layout="responsive"
             width={1}
             height={1}
