@@ -25,20 +25,14 @@ function Navbar() {
   const [showPdfPopup, setShowPdfPopup] = useState(false);
   const [showLinkedIn, setShowLinkedIn] = useState(false);
 
+  const handleNavClick = (section) => {
+    window.location.href = `#${section}`;
+  };
+
   const openEmailInNewTab = () => {
     window.open(
       "https://mail.google.com/mail/?view=cm&fs=1&to=sagaranupam2@gmail.com"
     );
-  };
-
-  const handleNavClick = () => {
-    const id = document.getElementsByTagName("section")[0].id;
-
-    if (id == "about") {
-      window.location.href += `#${id}`;
-    } else if (id == "projects") {
-      window.location.href += `#${id}`;
-    }
   };
 
   const handleMouseEnter = (setShow) => {
@@ -159,17 +153,23 @@ function Navbar() {
           </ul>
         </div>
       </div>
-      <div className="BREADCRUMB bg-slate-400 ">
-        <div className="  rounded-br-xl bg-slate-200 flex place-content-evenly w-full md:w-1/2 ">
-          <Link href="/" className="home">
+      <div className="breadcrumb bg-slate-400">
+        <div className="rounded-b-3xl md:rounded-br-xl bg-slate-200 flex place-content-evenly w-full md:w-1/2">
+          <a href="/" className="breadcrumb-link">
             HOME
-          </Link>
+          </a>
           /
-          <button onClick={handleNavClick} className="about">
+          <button
+            onClick={() => handleNavClick("about")}
+            className="breadcrumb-button"
+          >
             ABOUT
           </button>
           /
-          <button onClick={handleNavClick} className="projects">
+          <button
+            onClick={() => handleNavClick("projects")}
+            className="breadcrumb-button"
+          >
             PROJECTS
           </button>
         </div>

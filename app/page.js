@@ -25,11 +25,13 @@ function Page() {
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center p-4">
           <div>
             <Image
-              className="w-[50%] md:w-[50%]  rounded-lg "
+              className="w-[50%] md:w-[50%] pointer-events-none rounded-lg "
               layout="responsive"
               width={450} // half of
               height={100} // half of
               src="/error.gif"
+              alt="LOADING>>>>"
+              priority={true}
             />
           </div>
           <Link href="#projects" className="mt-4 text-xl md:text-2xl underline">
@@ -43,7 +45,6 @@ function Page() {
       <section id="projects">
         <Projects />
       </section>
-      {/*IMPORTING VIDEOS AND CONTENT TO LANDING PAGE*/}
     </div>
   );
 }

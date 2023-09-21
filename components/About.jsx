@@ -1,12 +1,23 @@
 import React from "react";
 import Image from "next/image";
+import ArrowCircleUpOutlinedIcon from "@mui/icons-material/ArrowCircleUpOutlined";
+import Link from "next/link";
 
 function About() {
   return (
     <div className="p-4 md:p-8">
-      <div className="bg-slate-700 text-white rounded-md text-center py-2 md:py-4 mb-4 md:mb-8 text-2xl md:text-4xl">
-        ABOUT ME
+      <div class="flex justify-center bg-slate-700 rounded-lg text-center py-2 md:py-4 mb-4 md:mb-8 text-2xl md:text-4xl">
+        <div class="flex-grow font-extrabold">ABOUT ME</div>
+        <div className="pr-[5vh]">
+          <Link href="/">
+            <ArrowCircleUpOutlinedIcon
+              fontSize="large"
+              className="animate-bounce rounded-full text-white bg-stone-700"
+            />
+          </Link>
+        </div>
       </div>
+
       <div className="flex flex-col md:flex-row bg-slate-500 rounded-md p-4 md:p-8">
         <div className="w-full md:w-1/2 mb-4 md:mb-0 md:mr-8">
           <Image
@@ -18,7 +29,7 @@ function About() {
             alt="CODING"
           />
         </div>
-        <div className="text-lg md:text-xl">
+        <div className="text-sm md:text-xl">
           <p className="mb-4">
             I’m a Frontend Web Developer located in India. I am an innovative
             Frontend developer with 2 years of experience in designing and

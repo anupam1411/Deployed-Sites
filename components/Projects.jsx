@@ -61,15 +61,18 @@ export default function Projects() {
   ];
   return (
     <div className="text-center  items-center p-4 md:p-8 ">
-      <div className="bg-slate-700 text-white rounded-md text-center py-2 md:py-4 mb-4 md:mb-8 text-2xl md:text-4xl">
-        PROJECTS
+      <div class="flex justify-center bg-slate-700 rounded-lg text-center py-2 md:py-4 mb-4 md:mb-8 text-2xl md:text-4xl">
+        <div class="flex-grow font-extrabold">PROJECTS</div>
+        <div className="pr-[5vh]">
+          <Link href="/">
+            <ArrowCircleUpOutlinedIcon
+              fontSize="large"
+              className="animate-bounce rounded-full text-white bg-stone-700"
+            />
+          </Link>
+        </div>
       </div>
-      <Link href="/">
-        <ArrowCircleUpOutlinedIcon
-          fontSize="large"
-          className="animate-bounce rounded-full text-white bg-gray-700"
-        />
-      </Link>
+
       <div className="flex flex-wrap rounded-xl scroll-smooth justify-center bg-slate-400 h-fit w-fit">
         {videosList.map((video) => (
           <Link key={video.href} href={video.href}>
