@@ -33,9 +33,12 @@ function Navbar() {
 
   const handleNavClick = () => {
     const id = document.getElementsByTagName("section")[0].id;
-    const id2 = document.getElementsByTagName("section")[1].id;
-    window.location.href += `#${id}`;
-    window.location.href += `#${id2}`;
+
+    if (id == "about") {
+      window.location.href += `#${id}`;
+    } else if (id == "projects") {
+      window.location.href += `#${id}`;
+    }
   };
 
   const handleMouseEnter = (setShow) => {
