@@ -8,16 +8,16 @@ import About from "@/components/About";
 function Page() {
   return (
     <div className="h-full bg-slate-400">
-      <div className="  flex place-content-evenly w-full md:w-1/3">
-        <Link href="#home" className="home">
+      <div className=" bg-slate-200 rounded-br-xl flex place-content-evenly w-full md:w-1/2">
+        <Link href="/#home" className="home">
           HOME
         </Link>
         /
-        <Link href="#about" className="about">
+        <Link href="/#about" className="about">
           ABOUT
         </Link>
         /
-        <Link href="#projects" className="projects">
+        <Link href="/#projects" className="projects">
           PROJECTS
         </Link>
       </div>
