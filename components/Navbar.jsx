@@ -149,7 +149,21 @@ function Navbar() {
           </ul>
         </div>
       </div>
-      <div className="BREADCRUMB   bg-slate-300"></div>
+      <div className="BREADCRUMB bg-slate-400 ">
+        <div className="  rounded-br-xl bg-slate-200 flex place-content-evenly w-full md:w-1/2 ">
+          <Link href="/#home" className="home">
+            HOME
+          </Link>
+          /
+          <Link href="/#about" className="about">
+            ABOUT
+          </Link>
+          /
+          <Link href="/#projects" className="projects">
+            PROJECTS
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

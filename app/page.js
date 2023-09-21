@@ -8,19 +8,6 @@ import About from "@/components/About";
 function Page() {
   return (
     <div className="h-full bg-slate-400">
-      <div className=" bg-slate-200 rounded-br-xl flex place-content-evenly w-full md:w-1/2">
-        <Link href="/#home" className="home">
-          HOME
-        </Link>
-        /
-        <Link href="/#about" className="about">
-          ABOUT
-        </Link>
-        /
-        <Link href="/#projects" className="projects">
-          PROJECTS
-        </Link>
-      </div>
       <div className="h-1/2 md:h-screen flex flex-col md:flex-row">
         <div className="w-full md:w-1/2 p-4">
           <div className="text-3xl pt-0 sm:pt-[30vh] md:text-5xl font-bold">
@@ -32,13 +19,15 @@ function Page() {
           </div>
         </div>
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center p-4">
-          <div>
+          <div className="w-full md:w-1/2 mb-4 md:mb-0 md:mr-8">
             <Image
-              className="w-[50%] md:w-[50%]  rounded-lg "
+              src="/coder.gif"
               layout="responsive"
-              width={450} // half of
-              height={100} // half of
-              src="/Pandora.gif"
+              width={1}
+              height={1}
+              className="rounded-md"
+              alt="CODING"
+              priority
             />
           </div>
           <Link href="#projects" className="mt-4 text-xl md:text-2xl underline">
