@@ -1,8 +1,6 @@
-"use client";
 import Projects from "@/components/Projects";
 import Image from "next/image";
 import Link from "next/link";
-import ArrowCircleUpOutlinedIcon from "@mui/icons-material/ArrowCircleUpOutlined";
 import About from "@/components/About";
 
 function Page() {
