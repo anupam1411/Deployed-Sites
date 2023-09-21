@@ -7,10 +7,16 @@ import About from "@/components/About";
 
 function Page() {
   return (
-    <div className="h-full bg-slate-400">
+    <div
+      className="h-full bg-gradient-to-r
+    from-zinc-800
+    via-slate-500
+    to-stone-500
+    background-animate bg-gray-400"
+    >
       <div className="h-1/2 md:h-screen flex flex-col md:flex-row">
-        <div className="w-full md:w-1/2 p-4">
-          <div className="text-3xl pt-0 sm:pt-[30vh] md:text-5xl font-bold">
+        <div className="w-full text-white md:w-1/2 p-4">
+          <div className="text-3xl  pt-0 sm:pt-[30vh] md:text-5xl font-bold">
             HELLO <br />
             I'm ANUPAM
           </div>
@@ -25,8 +31,7 @@ function Page() {
               layout="responsive"
               width={450} // half of
               height={100} // half of
-              src="/homie.gif"
-              priority
+              src="/error.gif"
             />
           </div>
           <Link href="#projects" className="mt-4 text-xl md:text-2xl underline">

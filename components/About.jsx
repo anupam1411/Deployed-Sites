@@ -16,7 +16,6 @@ function About() {
             height={1}
             className="rounded-md"
             alt="CODING"
-            priority
           />
         </div>
         <div className="text-lg md:text-xl">

@@ -59,7 +59,7 @@ export default function Projects() {
     },
   ];
   return (
-    <div className="text-center items-center p-4 md:p-8 ">
+    <div className="text-center  items-center p-4 md:p-8 ">
       <div className="bg-slate-700 text-white rounded-md text-center py-2 md:py-4 mb-4 md:mb-8 text-2xl md:text-4xl">
         PROJECTS
       </div>
@@ -69,7 +69,7 @@ export default function Projects() {
           className="animate-bounce rounded-full text-white bg-gray-700"
         />
       </Link>
-      <div className="flex flex-wrap scroll-smooth justify-center bg-slate-400 h-fit w-fit">
+      <div className="flex flex-wrap rounded-xl scroll-smooth justify-center bg-slate-400 h-fit w-fit">
         {videosList.map((video) => (
           <Link key={video.href} href={video.href}>
             <video
