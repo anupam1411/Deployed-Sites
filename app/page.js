@@ -19,14 +19,13 @@ function Page() {
           </div>
         </div>
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center p-4">
-          <div className="w-full md:w-1/2 mb-4 md:mb-0 md:mr-8">
+          <div>
             <Image
-              src="/coder.gif"
+              className="w-[50%] md:w-[50%]  rounded-lg "
               layout="responsive"
-              width={1}
-              height={1}
-              className="rounded-md"
-              alt="CODING"
+              width={450} // half of
+              height={100} // half of
+              src="/homie.gif"
               priority
             />
           </div>
