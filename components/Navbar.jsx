@@ -31,6 +31,13 @@ function Navbar() {
     );
   };
 
+  const handleNavClick = () => {
+    const id = document.getElementsByTagName("section")[0].id;
+    const id2 = document.getElementsByTagName("section")[1].id;
+    window.location.href += `#${id}`;
+    window.location.href += `#${id2}`;
+  };
+
   const handleMouseEnter = (setShow) => {
     setShow(true);
   };
@@ -151,17 +158,17 @@ function Navbar() {
       </div>
       <div className="BREADCRUMB bg-slate-400 ">
         <div className="  rounded-br-xl bg-slate-200 flex place-content-evenly w-full md:w-1/2 ">
-          <Link href="/#home" className="home">
+          <Link href="/" className="home">
             HOME
           </Link>
           /
-          <Link href="/#about" className="about">
+          <button onClick={handleNavClick} className="about">
             ABOUT
-          </Link>
+          </button>
           /
-          <Link href="/#projects" className="projects">
+          <button onClick={handleNavClick} className="projects">
             PROJECTS
-          </Link>
+          </button>
         </div>
       </div>
     </div>

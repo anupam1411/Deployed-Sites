@@ -37,12 +37,12 @@ function Page() {
           </Link>
         </div>
       </div>
-      <div id="about">
+      <section id="about">
         <About />
-      </div>
-      <div id="projects">
-        <Projects />{" "}
-      </div>
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
       {/*IMPORTING VIDEOS AND CONTENT TO LANDING PAGE*/}
     </div>
   );
