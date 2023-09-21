@@ -6,10 +6,10 @@ import About from "@/components/About";
 function Page() {
   return (
     <div
-      className="h-full bg-gradient-to-r
+      className="h-full bg-gradient-to-b
     from-zinc-800
     via-slate-500
-    to-stone-500
+    to-stone-800
     background-animate bg-gray-400"
     >
       <div className="h-1/2 md:h-screen flex flex-col md:flex-row">
