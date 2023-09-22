@@ -81,7 +81,7 @@ export default function Projects() {
               autoPlay={true}
               loop={true}
               muted
-              className=" h-[30vh] sm:h-[35vh] hover:ease-in-out duration-300 hover:scale-110 hover:border-2 m-[1vh] rounded border-cyan-200"
+              className=" h-[27vh] sm:h-[35vh] hover:ease-in-out duration-300 hover:scale-110 hover:border-2 m-[1vh] rounded border-cyan-200"
               src={video.src}
             />
             <div className="text-center font-semibold">{video.title}</div>
