@@ -51,9 +51,41 @@ function Navbar() {
     setPdfOpen(false);
   };
 
+  const copyToClipboard = (text) => {
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+
+    // Make the textarea invisible
+    textArea.style.position = "fixed";
+    textArea.style.top = 0;
+    textArea.style.left = 0;
+    textArea.style.width = "1px";
+    textArea.style.height = "1px";
+    textArea.style.opacity = 0;
+
+    document.body.appendChild(textArea);
+
+    // Select the text
+    textArea.select();
+
+    try {
+      // Execute the copy command
+      const success = document.execCommand("copy");
+      if (success) {
+        alert("Phone number copied to clipboard!");
+      } else {
+        alert("Copy to clipboard failed.");
+      }
+    } catch (err) {
+      console.error("Unable to copy to clipboard:", err);
+    } finally {
+      // Clean up the textarea
+      document.body.removeChild(textArea);
+    }
+  };
+
   const copyAlert = () => {
-    navigator.clipboard.writeText("9175003239");
-    alert("Phone number copied to clipboard!");
+    copyToClipboard("9175003239");
   };
 
   return (
