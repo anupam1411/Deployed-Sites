@@ -51,20 +51,13 @@ function Navbar() {
     setPdfOpen(false);
   };
 
-  const copyToClipboard = (text) => {
-    if (navigator.clipboard) {
-      navigator.clipboard
-        .writeText(text)
-        .then(() => {
-          alert(
-            "You have copied My Number, Try giving me a Call Sometimes...."
-          );
-        })
-        .catch((error) => {
-          console.error("Unable to copy to clipboard:", error);
-        });
-    } else {
-      alert("Clipboard API is not supported in this browser.");
+  const copyToClipboard = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      alert("You have copied My Number, Try giving me a Call Sometimes....");
+    } catch (error) {
+      console.error("Unable to copy to clipboard:", error);
+      alert("Copy to clipboard failed.");
     }
   };
 
