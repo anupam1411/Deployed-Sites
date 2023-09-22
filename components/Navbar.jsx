@@ -52,35 +52,19 @@ function Navbar() {
   };
 
   const copyToClipboard = (text) => {
-    const textArea = document.createElement("textarea");
-    textArea.value = text;
-
-    // Make the textarea invisible
-    textArea.style.position = "fixed";
-    textArea.style.top = 0;
-    textArea.style.left = 0;
-    textArea.style.width = "1px";
-    textArea.style.height = "1px";
-    textArea.style.opacity = 0;
-
-    document.body.appendChild(textArea);
-
-    // Select the text
-    textArea.select();
-
-    try {
-      // Execute the copy command
-      const success = document.execCommand("copy");
-      if (success) {
-        alert("Phone number copied to clipboard!");
-      } else {
-        alert("Copy to clipboard failed.");
-      }
-    } catch (err) {
-      console.error("Unable to copy to clipboard:", err);
-    } finally {
-      // Clean up the textarea
-      document.body.removeChild(textArea);
+    if (navigator.clipboard) {
+      navigator.clipboard
+        .writeText(text)
+        .then(() => {
+          alert(
+            "You have copied My Number, Try giving me a Call Sometimes...."
+          );
+        })
+        .catch((error) => {
+          console.error("Unable to copy to clipboard:", error);
+        });
+    } else {
+      alert("Clipboard API is not supported in this browser.");
     }
   };
 
