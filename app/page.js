@@ -2,7 +2,7 @@ import Projects from "@/components/Projects";
 import Image from "next/image";
 import Link from "next/link";
 import About from "@/components/About";
-import LikeButton from "@/components/LikeButton";
+// import LikeButton from "@/components/LikeButton";
 
 function Page() {
   return (
@@ -22,9 +22,9 @@ function Page() {
           <div className="text-2xl md:text-4xl mt-4">
             Frontend Web Developer
           </div>
-          <div>
+          {/* <div>
             <LikeButton />
-          </div>
+          </div> */}
         </div>
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center p-4">
           <div>
