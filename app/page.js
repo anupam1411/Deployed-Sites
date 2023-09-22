@@ -8,10 +8,10 @@ function Page() {
   return (
     <div
       className="h-full bg-gradient-to-b
-    from-zinc-800
+    from-zinc-900
     via-slate-500
-    to-stone-800
-    background-animate bg-gray-400"
+    to-stone-700
+    background-animate "
     >
       <div className="h-1/2 md:h-screen flex flex-col md:flex-row">
         <div className="w-full text-white md:w-1/2 p-4">
