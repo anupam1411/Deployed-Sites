@@ -51,19 +51,72 @@ function Navbar() {
     setPdfOpen(false);
   };
 
-  const copyToClipboard = async (text) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      alert("You have copied My Number, Try giving me a Call Sometimes....");
-    } catch (error) {
-      console.error("Unable to copy to clipboard:", error);
-      alert("Copy to clipboard failed.");
+  const copyToClipboard = (text) => {
+    if (navigator.clipboard) {
+      navigator.clipboard
+        .writeText(text)
+        .then(() => {
+          // Clipboard write was successful
+          alert("Phone number copied to clipboard!");
+        })
+        .catch((error) => {
+          // Handle any errors that occurred during clipboard write
+          console.error("Unable to copy to clipboard:", error);
+          alert("Copy to clipboard failed.");
+        });
+    } else {
+      // Fallback for browsers that don't support the Clipboard API
+      const textArea = document.createElement("textarea");
+      textArea.value = text;
+
+      // Make the textarea invisible
+      textArea.style.position = "fixed";
+      textArea.style.top = 0;
+      textArea.style.left = 0;
+      textArea.style.width = "1px";
+      textArea.style.height = "1px";
+      textArea.style.opacity = 0;
+
+      document.body.appendChild(textArea);
+
+      // Select the text
+      textArea.select();
+
+      try {
+        // Execute the copy command
+        const success = document.execCommand("copy");
+        if (success) {
+          alert("Phone number copied to clipboard!");
+        } else {
+          alert("Copy to clipboard failed.");
+        }
+      } catch (err) {
+        console.error("Unable to copy to clipboard:", err);
+        alert("Copy to clipboard failed.");
+      } finally {
+        // Clean up the textarea
+        document.body.removeChild(textArea);
+      }
     }
   };
 
   const copyAlert = () => {
     copyToClipboard("9175003239");
   };
+
+  // const copyToClipboard = async (text) => {
+  //   try {
+  //     await navigator.clipboard.writeText(text);
+  //     alert("You have copied My Number, Try giving me a Call Sometimes....");
+  //   } catch (error) {
+  //     console.error("Unable to copy to clipboard:", error);
+  //     alert("Copy to clipboard failed.");
+  //   }
+  // };
+
+  // const copyAlert = () => {
+  //   copyToClipboard("9175003239");
+  // };
 
   return (
     <div>
