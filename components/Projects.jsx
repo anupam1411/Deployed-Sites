@@ -72,8 +72,34 @@ export default function Projects() {
           </Link>
         </div>
       </div>
-
-      <div className="flex flex-wrap rounded-xl scroll-smooth justify-center bg-slate-400 h-fit w-fit">
+      <div className=" shadow-2xl shadow-slate-900 bg-slate-700 rounded-lg text-center py-2 md:py-4 mb-4 md:mb-8 text-slate-200  text-sm md:text-xl">
+        <article>
+          <p>
+            Welcome to My projects showcase! Here, you can explore My innovative
+            creations through videos and experience them firsthand by visiting
+            the project websites. Each project represents My dedication to
+            excellence and creativity.{" "}
+          </p>
+          <br />
+          <p>
+            Browse through the video links below to get a quick glimpse of My
+            work, and when you're ready to dive deeper, click on the project
+            titles to access the project websites. Feel free to explore, use,
+            and learn more about the solutions I've crafted to make a
+            difference.
+          </p>
+          <br />
+          <p>
+            I'm passionate about what I do, and these projects reflect My
+            commitment to pushing boundaries and solving real-world challenges.
+            If you have any questions or feedback, please don't hesitate to
+          </p>
+        </article>
+        <Link href="https://www.linkedin.com/in/anupam-sagar-082b33240">
+          get in touch
+        </Link>
+      </div>
+      <div className="flex flex-wrap rounded-xl scroll-smooth justify-center  bg-slate-400 h-fit w-fit">
         {videosList.map((video) => (
           <Link key={video.href} href={video.href}>
             <video
