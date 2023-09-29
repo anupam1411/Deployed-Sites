@@ -61,8 +61,8 @@ export default function Projects() {
   ];
   return (
     <div className="text-center  items-center p-4 md:p-8 ">
-      <div class="flex justify-center  shadow-2xl shadow-slate-900 bg-slate-700 rounded-lg text-center py-2 md:py-4 mb-4 md:mb-8 text-2xl md:text-4xl">
-        <div class="flex-grow font-extrabold ">PROJECTS</div>
+      <div class="flex justify-center  shadow-2xl shadow-slate-900 bg-gradient-to-l from-slate-800 via-gray-200 to-slate-800 rounded-lg text-center py-2 md:py-4 mb-4 md:mb-8 text-2xl md:text-4xl">
+        <div class="flex-grow text-neutral-800 font-extrabold ">PROJECTS</div>
         <div className="pr-[5vh]">
           <Link href="/">
             <ArrowCircleUpOutlinedIcon
@@ -72,7 +72,7 @@ export default function Projects() {
           </Link>
         </div>
       </div>
-      <div className=" shadow-2xl shadow-slate-900 bg-slate-700 rounded-lg text-center py-2 md:py-4 mb-4 md:mb-8 text-slate-200  text-sm md:text-xl">
+      <div className=" shadow-2xl shadow-slate-900 bg-slate-800 rounded-lg text-center py-2 md:py-4 mb-4 md:mb-8 text-slate-200  text-sm md:text-xl">
         <article>
           <p>
             Welcome to My projects showcase! Here, you can explore My innovative
@@ -95,7 +95,10 @@ export default function Projects() {
             If you have any questions or feedback, please don't hesitate to
           </p>
         </article>
-        <Link href="https://www.linkedin.com/in/anupam-sagar-082b33240">
+        <Link
+          href="https://www.linkedin.com/in/anupam-sagar-082b33240"
+          className="underline decoration-sky-500"
+        >
           get in touch
         </Link>
       </div>
@@ -107,7 +110,7 @@ export default function Projects() {
               autoPlay={true}
               loop={true}
               muted
-              className=" h-[27vh] sm:h-[35vh] hover:ease-in-out duration-300 hover:scale-110 hover:border-2 m-[1vh] rounded border-cyan-200"
+              className=" h-[24vh] sm:h-[35vh] hover:ease-in-out duration-300 hover:scale-110 hover:border-2 m-[1vh] rounded border-cyan-200"
               src={video.src}
             />
             <div className="text-center font-semibold">{video.title}</div>

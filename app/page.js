@@ -6,20 +6,14 @@ import About from "@/components/About";
 
 function Page() {
   return (
-    <div
-      className="h-full bg-gradient-to-b
-    from-zinc-900
-    via-slate-500
-    to-stone-700
-    background-animate "
-    >
+    <div className="h-full bg-gradient-to-b from-zinc-900 via-slate-500 to-stone-700background-animate ">
       <div className="h-1/2 md:h-screen flex flex-col md:flex-row">
         <div className="w-full text-white md:w-1/2 p-4">
-          <div className="text-3xl  pt-0 sm:pt-[30vh] md:text-5xl font-bold">
+          <div className="text-3xl animate-fade-right animate-once animate-duration-[2000ms] pt-0 sm:pt-[30vh] md:text-5xl font-bold">
             HELLO <br />
             I'm ANUPAM
           </div>
-          <div className="text-2xl md:text-4xl mt-4">
+          <div className="text-2xl animate-fade-up animate-once animate-delay-[400ms] md:text-4xl mt-4">
             Frontend Web Developer
           </div>
           {/* <div>

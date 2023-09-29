@@ -6,7 +6,7 @@ import Link from "next/link";
 function About() {
   return (
     <div className="p-4 md:p-8 ">
-      <div class="flex justify-center shadow-2xl shadow-slate-900 bg-slate-700 rounded-lg text-center py-2 md:py-4 mb-4 md:mb-8 text-2xl md:text-4xl">
+      <div class="flex justify-center shadow-2xl shadow-slate-900 bg-gradient-to-l from-slate-700 via-gray-200 to-slate-700 rounded-lg text-center py-2 md:py-4 mb-4 md:mb-8 text-2xl md:text-4xl">
         <div class="flex-grow font-extrabold">ABOUT ME</div>
         <div className="pr-[5vh]">
           <Link href="/">
