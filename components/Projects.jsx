@@ -73,7 +73,7 @@ export default function Projects() {
         </div>
       </div>
       <div className=" shadow-2xl shadow-slate-900 bg-slate-800 rounded-lg text-center py-2 md:py-4 mb-4 md:mb-8 text-slate-200  text-sm md:text-xl">
-        <article>
+        <article className="p-2 md:p-12">
           <p>
             Welcome to My projects showcase! Here, you can explore My innovative
             creations through videos and experience them firsthand by visiting
@@ -98,6 +98,7 @@ export default function Projects() {
         <Link
           href="https://www.linkedin.com/in/anupam-sagar-082b33240"
           className="underline decoration-sky-500"
+          target="_blank"
         >
           get in touch
         </Link>
