@@ -5,9 +5,10 @@ import Link from "next/link";
 // icons
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import CallIcon from "@mui/icons-material/Call";
-import EmailIcon from "@mui/icons-material/Email";
-import TextSnippetIcon from "@mui/icons-material/TextSnippet";
+import CallTwoToneIcon from "@mui/icons-material/CallTwoTone";
+import DescriptionTwoToneIcon from "@mui/icons-material/DescriptionTwoTone";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import EmailTwoToneIcon from "@mui/icons-material/EmailTwoTone";
 
 //Components
 import PhoneNumberPopup from "./PhoneNumberPopup"; // Import the PhoneNumberPopup component
@@ -16,6 +17,7 @@ import PdfViewer from "@/components/PdfViewer"; // Adjust the import path accord
 import GitPopup from "./GitPopup";
 import LinkedinPopup from "./LinkedinPopup";
 import PdfPopup from "./PdfPopup";
+import InstaPopup from "./InstaPopup";
 
 function Navbar() {
   const [showPhoneNumberPopup, setShowPhoneNumberPopup] = useState(false);
@@ -24,6 +26,7 @@ function Navbar() {
   const [showGitPopup, setShowGitPopup] = useState(false);
   const [showPdfPopup, setShowPdfPopup] = useState(false);
   const [showLinkedIn, setShowLinkedIn] = useState(false);
+  const [showInstaPopup, setShowInstaPopup] = useState(false);
 
   const handleNavClick = (section) => {
     window.location.href = `#${section}`;
@@ -163,7 +166,7 @@ function Navbar() {
               )}
             </li>
             <li>
-              <TextSnippetIcon
+              <DescriptionTwoToneIcon
                 onMouseEnter={() => handleMouseEnter(setShowPdfPopup)}
                 onMouseLeave={() => handleMouseLeave(setShowPdfPopup)}
                 onClick={openPdfViewer}
@@ -171,15 +174,15 @@ function Navbar() {
                 className=" text-[#3f51b5] "
               />
               <PdfViewer open={pdfOpen} onClose={closePdfViewer} />
+              {showPdfPopup && (
+                <div className="flex justify-center absolute">
+                  <PdfPopup onClose={() => handleMouseLeave(setShowPdfPopup)} />
+                </div>
+              )}
             </li>
-            {showPdfPopup && (
-              <div className="flex justify-center absolute">
-                <PdfPopup onClose={() => handleMouseLeave(setShowPdfPopup)} />
-              </div>
-            )}
             <li>
               <Link href="/">
-                <CallIcon
+                <CallTwoToneIcon
                   fontSize="large"
                   onMouseEnter={() => handleMouseEnter(setShowPhoneNumberPopup)}
                   onMouseLeave={() => handleMouseLeave(setShowPhoneNumberPopup)}
@@ -197,7 +200,7 @@ function Navbar() {
             </li>
             <li>
               <Link href="" onClick={openEmailInNewTab}>
-                <EmailIcon
+                <EmailTwoToneIcon
                   onMouseEnter={() => handleMouseEnter(setShowEmailPopup)}
                   onMouseLeave={() => handleMouseLeave(setShowEmailPopup)}
                   fontSize="large"
@@ -212,10 +215,30 @@ function Navbar() {
                 )}
               </Link>
             </li>
+            <li>
+              <Link
+                href="https://www.instagram.com/anupamnopqrstuvwxyz/"
+                target="_blank"
+              >
+                <InstagramIcon
+                  onMouseEnter={() => handleMouseEnter(setShowInstaPopup)}
+                  onMouseLeave={() => handleMouseLeave(setShowInstaPopup)}
+                  className="text-pink-600"
+                  fontSize="large"
+                />
+              </Link>{" "}
+              {showInstaPopup && (
+                <div className="flex justify-center absolute">
+                  <InstaPopup
+                    onClose={() => handleMouseLeave(setShowInstaPopup)}
+                  />
+                </div>
+              )}
+            </li>
           </ul>
         </div>
       </div>
-      <div className="breadcrumb bg-slate-400">
+      <div className="breadcrumb flex bg-slate-400">
         <div className="rounded-b-3xl md:rounded-b-none md:rounded-br-xl bg-slate-200 flex place-content-evenly w-full md:w-1/2 animate-fade-right animate-once animate-duration-[2000ms]">
           <a href="/" className="breadcrumb-link">
             HOME

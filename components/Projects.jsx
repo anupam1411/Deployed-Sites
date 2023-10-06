@@ -61,7 +61,7 @@ export default function Projects() {
   ];
   return (
     <div className="text-center  items-center p-4 md:p-8 ">
-      <div class="flex justify-center  shadow-2xl shadow-slate-900 bg-gradient-to-l from-slate-800 via-gray-200 to-slate-800 rounded-lg text-center py-2 md:py-4 mb-4 md:mb-8 text-2xl md:text-4xl">
+      <div className="flex justify-center  shadow-2xl shadow-slate-900 bg-gradient-to-l from-slate-800 via-gray-200 to-slate-800 rounded-lg text-center py-2 md:py-4 mb-4 md:mb-8 text-2xl md:text-4xl">
         <div class="flex-grow text-neutral-800 font-extrabold ">PROJECTS</div>
         <div className="pr-[5vh]">
           <Link href="/">
