@@ -11,6 +11,13 @@ export default function Projects() {
 
   const videosList = [
     {
+      href: "https://resume-ranker-frontend.netlify.app/",
+      src: "project-videos/resume-ranker.mp4",
+      title: "RESUME RANKING SYSTEM",
+      description: "Final Year Project",
+      timeLine: "2022 - 2023",
+    },
+    {
       href: "https://fidget-games.netlify.app/",
       src: "project-videos/fidget-games.mp4",
       title: "FIDGET GAMES",
@@ -114,7 +121,8 @@ export default function Projects() {
               className=" h-[24vh] sm:h-[35vh] hover:ease-in-out duration-300 hover:scale-110 hover:border-2 m-[1vh] rounded border-cyan-200"
               src={video.src}
             />
-            <div className="text-center font-semibold">{video.title}</div>
+            <div className="text-center font-extrabold">{video.title}</div>
+            <div className="text-center font-medium ">{video.description}</div>
             <div className="text-xs text-center">{video.timeLine}</div>
           </Link>
         ))}
