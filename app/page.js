@@ -2,6 +2,8 @@ import Projects from "@/components/Projects";
 import Image from "next/image";
 import Link from "next/link";
 import About from "@/components/About";
+import videosList from "@/components/VideosList";
+
 // import LikeButton from "@/components/LikeButton";
 
 function Page() {
@@ -25,8 +27,8 @@ function Page() {
             <Image
               className="w-[50%] md:w-[50%] pointer-events-none rounded-lg "
               layout="responsive"
-              width={450} // half of
-              height={100} // half of
+              width={1} // half of
+              height={1} // half of
               src="/error.gif"
               alt="LOADING>>>>"
               priority={true}
@@ -41,7 +43,7 @@ function Page() {
         <About />
       </section>
       <section id="projects">
-        <Projects />
+        <Projects videosList={videosList} />
       </section>
     </div>
   );

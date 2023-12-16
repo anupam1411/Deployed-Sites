@@ -19,7 +19,8 @@
     "nextjs-toploader": "^1.5.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tailwindcss-animated": "^1.0.1"
+    "tailwindcss-animated": "^1.0.1",
+    "tw-elements": "^1.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.15",
