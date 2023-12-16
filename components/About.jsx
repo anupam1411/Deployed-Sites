@@ -31,16 +31,28 @@ function About() {
         </div>
         <div className="text-sm md:text-xl">
           <p className="mb-4">
-            I’m a Frontend Web Developer located in India. I am an innovative
-            Frontend developer with 2 years of experience in designing and
-            developing personal web applications.
+            Hey there! I'm Anupam Sagar, a recent Computer Science grad who's
+            all about tech and just snagged a cool 8.31 CGPA. I'm on the road to
+            becoming a Full Stack Developer, and my jam is the MERN (MongoDB,
+            Express.js, React, Node.js) stack. By the way, this website? Made
+            with Next.js because, you know, staying on top of the latest web dev
+            trends!
           </p>
           <p>
-            I'm a recent Computer Engineering graduate interested in web
-            development roles. I have a strong foundation in front-end
-            development technologies such as HTML, CSS, JavaScript,TailwindCSS,
-            ReactJS and Next.js, with completed projects showcasing my skills.
-            I've also used Prompt Engineering for web app development.
+            I've been getting my hands dirty with projects, and one standout is
+            the Resume Ranking System. Cooked up the backend with Python and
+            Flask, and the frontend? Well, that's all ReactJS doing its thing.
+            It's not just about the code; it's about connecting the backend
+            magic to the user-friendly front end.
+          </p>
+          <br />
+          <p>
+            Beyond the coding adventures, I've even dipped my toes into the
+            academic scene. Two papers of mine got published in the
+            International Journal of Scientific Research in Engineering and
+            Management (IJSREM). Fancy, right? So, join me on this journey as I
+            dive into the world of MERN stack development. We're in for some
+            coding fun and a bit of innovation! 🚀
           </p>
         </div>
       </div>
