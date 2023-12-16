@@ -239,7 +239,7 @@ function Navbar() {
         </div>
       </div>
       <div className="breadcrumb flex bg-slate-400">
-        <div className="rounded-b-3xl md:rounded-b-none md:rounded-br-xl bg-slate-200 flex place-content-evenly w-full md:w-1/2 animate-fade-right animate-once animate-duration-[2000ms]">
+        <div className="rounded-b-3xl md:rounded-b-none md:rounded-br-xl bg-slate-200 flex place-content-evenly w-full md:w-1/2 animate-fade-right animate-once animate-duration-[2000ms] text-lg font-semibold">
           <a href="/" className="breadcrumb-link">
             HOME
           </a>

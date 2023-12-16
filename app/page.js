@@ -1,8 +1,10 @@
+"use client";
 import Projects from "@/components/Projects";
 import Image from "next/image";
 import Link from "next/link";
 import About from "@/components/About";
 import videosList from "@/components/VideosList";
+import Tilt from "react-parallax-tilt";
 
 // import LikeButton from "@/components/LikeButton";
 
@@ -23,7 +25,19 @@ function Page() {
           </div> */}
         </div>
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center p-4">
-          <div>
+          <Tilt
+            className="tilt-img"
+            tiltMaxAngleX={35}
+            tiltMaxAngleY={35}
+            perspective={900}
+            scale={1.1}
+            transitionSpeed={2000}
+            gyroscope={true}
+            glareEnable={true}
+            glareMaxOpacity={0.9}
+            glareColor="#DBAEAE"
+            glarePosition="all"
+          >
             <Image
               className="w-[50%] md:w-[50%] pointer-events-none rounded-lg "
               layout="responsive"
@@ -33,10 +47,7 @@ function Page() {
               alt="LOADING>>>>"
               priority={true}
             />
-          </div>
-          <Link href="#projects" className="mt-4 text-xl md:text-2xl underline">
-            Projects
-          </Link>
+          </Tilt>
         </div>
       </div>
       <section id="about">
