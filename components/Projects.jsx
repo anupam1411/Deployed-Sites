@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import { React, useState } from "react";
 import Link from "next/link";
 import ArrowCircleUpOutlinedIcon from "@mui/icons-material/ArrowCircleUpOutlined";
 import Tilt from "react-parallax-tilt";
@@ -8,6 +8,16 @@ export default function Projects({ videosList }) {
   const handleClick = (event, url) => {
     event.preventDefault();
     window.open(url, "_blank");
+  };
+
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
   };
 
   return (
@@ -70,11 +80,13 @@ export default function Projects({ videosList }) {
         {videosList.map((video) => (
           <Tilt
             key={video.href}
+            onEnter={handleMouseEnter}
+            onLeave={handleMouseLeave}
+            scale={isHovered ? 1.2 : 1}
             className="parallax-effect"
             tiltMaxAngleX={35}
             tiltMaxAngleY={35}
             perspective={900}
-            scale={1.1}
             transitionSpeed={2000}
             gyroscope={true}
           >

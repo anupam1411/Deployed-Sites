@@ -1,14 +1,28 @@
 "use client";
 import Projects from "@/components/Projects";
 import Image from "next/image";
-import Link from "next/link";
 import About from "@/components/About";
 import videosList from "@/components/VideosList";
 import Tilt from "react-parallax-tilt";
+import { useState } from "react";
 
 // import LikeButton from "@/components/LikeButton";
 
 function Page() {
+  const handleClick = (event, url) => {
+    event.preventDefault();
+    window.open(url, "_blank");
+  };
+
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
   return (
     <div className="h-full bg-gradient-to-b from-zinc-900 via-slate-500 to-stone-700 ">
       <div className="h-1/2 md:h-screen flex flex-col md:flex-row">
@@ -30,16 +44,18 @@ function Page() {
             tiltMaxAngleX={35}
             tiltMaxAngleY={35}
             perspective={900}
-            scale={1.1}
+            onEnter={handleMouseEnter}
+            onLeave={handleMouseLeave}
+            scale={isHovered ? 1.3 : 1}
             transitionSpeed={2000}
             gyroscope={true}
             glareEnable={true}
             glareMaxOpacity={0.9}
-            glareColor="#DBAEAE"
+            glareColor="#FA8072"
             glarePosition="all"
           >
             <Image
-              className="w-[50%] md:w-[50%] pointer-events-none rounded-lg "
+              className="w-[50%] md:w-[50%] pointer-events-none  "
               layout="responsive"
               width={1} // half of
               height={1} // half of
