@@ -53,6 +53,7 @@ function Page() {
             glareMaxOpacity={0.9}
             glareColor="#FA8072"
             glarePosition="all"
+            as="style"
           >
             <Image
               className="w-[50%] md:w-[50%] pointer-events-none  "
