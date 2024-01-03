@@ -4,11 +4,43 @@ import Image from "next/image";
 import About from "@/components/About";
 import videosList from "@/components/VideosList";
 import Tilt from "react-parallax-tilt";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // import LikeButton from "@/components/LikeButton";
 
 function Page() {
+  function TypewriterEffect({ text }) {
+    const [displayedText, setDisplayedText] = useState("");
+    const [showBlinker, setShowBlinker] = useState(true);
+
+    useEffect(() => {
+      let index = 0;
+      const intervalId = setInterval(() => {
+        setDisplayedText((prevText) => {
+          if (index < text.length) {
+            index += 1;
+            return prevText + text[index - 1];
+          } else {
+            clearInterval(intervalId);
+            setTimeout(() => {
+              setShowBlinker(false);
+            }, 2000);
+            return prevText;
+          }
+        });
+      }, 100); // Adjust the interval as needed
+
+      return () => clearInterval(intervalId);
+    }, [text]);
+
+    return (
+      <div className="text-2xl animate-fade-up animate-once animate-delay-[400ms] md:text-4xl mt-4">
+        {displayedText}
+        {showBlinker && "|"}
+      </div>
+    );
+  }
+
   const handleClick = (event, url) => {
     event.preventDefault();
     window.open(url, "_blank");
@@ -32,7 +64,7 @@ function Page() {
             I'm ANUPAM
           </div>
           <div className="text-2xl animate-fade-up animate-once animate-delay-[400ms] md:text-4xl mt-4">
-            Frontend Web Developer
+            <TypewriterEffect text="Frontend Web Developer" />
           </div>
           {/* <div>
             <LikeButton />
@@ -40,7 +72,7 @@ function Page() {
         </div>
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center p-4">
           <Tilt
-            className="tilt-img"
+            className="tilt-img "
             tiltMaxAngleX={35}
             tiltMaxAngleY={35}
             perspective={900}
@@ -50,8 +82,8 @@ function Page() {
             transitionSpeed={2000}
             gyroscope={true}
             glareEnable={true}
-            glareMaxOpacity={0.9}
-            glareColor="#FA8072"
+            glareMaxOpacity={0.5}
+            glareColor="#7393B3"
             glarePosition="all"
             as="style"
           >
