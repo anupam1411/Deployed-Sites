@@ -16,7 +16,7 @@ function PdfViewer({ open, onClose }) {
           <CancelRoundedIcon fontSize="large" />
         </IconButton>
         <embed
-          src="assets/anupam-resume-2023.pdf"
+          src="assets/anupam-resume-dec-2023.pdf"
           className="w-full h-[80vh]"
           type="application/pdf"
         />
