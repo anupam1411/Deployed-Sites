@@ -30,7 +30,7 @@ function Contact() {
               <input
                 type="hidden"
                 name="_next"
-                value="https://yourdomain.co/thanks.html"
+                value="https://anupam-deploys.netlify.app/thankyou"
               ></input>
               <input
                 className="w-full px-3 py-2 border rounded-md"
