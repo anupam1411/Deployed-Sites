@@ -4,7 +4,7 @@ import Image from "next/image";
 function Contact() {
   return (
     <div className="main flex justify-center items-center h-screen">
-      <div className="w-1/2 contactForm  p-8 rounded hidden lg:block">
+      <div className="w-1/2 sm:w-2/3 contactForm  p-8 rounded hidden lg:block">
         <Image
           src="/texting.gif"
           height={1}
@@ -12,26 +12,26 @@ function Contact() {
           className="w-1/2 h-1/2 rounded-full"
         ></Image>
       </div>
-      <div className="w-1/2">
-        <div className="contactForm w-[40vw]  bg-[#FFEEFE] rounded shadow-md">
-          <h2 className="text-5xl font-semibold text-center pt-4">
+      <div className="w-full sm:w-1/2 flex justify-center">
+        <div className="contactForm sm:w-[40vw] w-[80vw] bg-[#FFEEFE] rounded shadow-md">
+          <h2 className="sm:text-5xl text-2xl sm:font-semibold font-extrabold text-center pt-4">
             GET IN TOUCH
           </h2>
           <form
             action="https://formsubmit.co/sagaranupam2@gmail.com"
             method="POST"
-            className="p-8"
+            className="p-8 w-full sm:w-auto"
           >
             <div className="mb-4">
               <label className="block text-gray-700 text-sm font-bold mb-2">
                 Name:
               </label>
-              <input type="hidden" name="_captcha" value="false"></input>
+              <input type="hidden" name="_captcha" value="false" />
               <input
                 type="hidden"
                 name="_next"
                 value="https://anupam-deploys.netlify.app/thankyou"
-              ></input>
+              />
               <input
                 className="w-full px-3 py-2 border rounded-md"
                 type="text"
@@ -60,7 +60,7 @@ function Contact() {
               />
             </div>
             <button
-              className="bg-[#b869bf] text-white font-bold py-2 px-4 rounded-md hover:bg-[#d836c8]"
+              className="bg-[#b869bf] text-white font-bold py-2 px-4 rounded-md hover:bg-[#d836c8] w-full sm:w-auto"
               type="submit"
             >
               Send
