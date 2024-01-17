@@ -260,6 +260,13 @@ function Navbar() {
           >
             PROJECTS
           </button>
+          /
+          <button
+            onClick={() => handleNavClick("contact")}
+            className="breadcrumb-button text-black hover:text-slate-400"
+          >
+            CONTACT
+          </button>
         </div>
       </div>
     </div>

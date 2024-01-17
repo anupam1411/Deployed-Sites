@@ -1,7 +1,8 @@
 "use client";
-import Projects from "@/components/Projects";
-import Image from "next/image";
 import About from "@/components/About";
+import Projects from "@/components/Projects";
+import Contact from "@/components/contact";
+import Image from "next/image";
 import videosList from "@/components/VideosList";
 import Tilt from "react-parallax-tilt";
 import { useState, useEffect } from "react";
@@ -104,6 +105,9 @@ function Page() {
       </section>
       <section id="projects">
         <Projects videosList={videosList} />
+      </section>
+      <section id="contact">
+        <Contact videosList={videosList} />
       </section>
     </div>
   );
