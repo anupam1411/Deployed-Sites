@@ -1,7 +1,7 @@
 "use client";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
-import Contact from "@/components/contact";
+import Contact from "@/components/Contact";
 import Image from "next/image";
 import videosList from "@/components/VideosList";
 import Tilt from "react-parallax-tilt";
