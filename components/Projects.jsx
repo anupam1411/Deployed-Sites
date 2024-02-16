@@ -42,9 +42,9 @@ export default function Projects({ videosList }) {
             creations through videos and experience them firsthand by visiting
             the project websites. Each project represents My dedication to
             excellence and creativity.
-          </p>{" "}
+          </p>
           <p>
-            I have published two papers on resume ranking system:{" "}
+            I have published two papers on resume ranking system:
             <Link
               href="https://ijsrem.com/download/resume-ranking-system-using-machine-learning-nlp-2/"
               className="underline text-sky-500"
