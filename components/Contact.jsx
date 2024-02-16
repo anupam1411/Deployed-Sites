@@ -11,6 +11,7 @@ function Contact() {
           width={1}
           className="w-1/2 h-1/2 rounded-full"
           alt="TEXT MEEE 📧📧📧 "
+          unoptimized={true}
         ></Image>
       </div>
       <div className="w-full sm:w-1/2 flex justify-center">
