@@ -18,6 +18,7 @@ import GitPopup from "./GitPopup";
 import LinkedinPopup from "./LinkedinPopup";
 import PdfPopup from "./PdfPopup";
 import InstaPopup from "./InstaPopup";
+import { useRouter } from "next/navigation";
 
 function Navbar() {
   const [showPhoneNumberPopup, setShowPhoneNumberPopup] = useState(false);
@@ -28,8 +29,11 @@ function Navbar() {
   const [showLinkedIn, setShowLinkedIn] = useState(false);
   const [showInstaPopup, setShowInstaPopup] = useState(false);
 
-  const handleNavClick = (section) => {
-    window.location.href = `#${section}`;
+  const router = useRouter();
+  const handleNavClick = (section, e) => {
+    e.preventDefault();
+    router.push(`#${section}`);
+    console.log(`#${section}`);
   };
 
   const openEmailInNewTab = () => {
@@ -248,21 +252,21 @@ function Navbar() {
           </a>
           /
           <button
-            onClick={() => handleNavClick("about")}
+            onClick={(e) => handleNavClick("about", e)}
             className="breadcrumb-button text-black hover:text-slate-400"
           >
             ABOUT
           </button>
           /
           <button
-            onClick={() => handleNavClick("projects")}
+            onClick={(e) => handleNavClick("projects", e)}
             className="breadcrumb-button text-black hover:text-slate-400"
           >
             PROJECTS
           </button>
           /
           <button
-            onClick={() => handleNavClick("contact")}
+            onClick={(e) => handleNavClick("contact", e)}
             className="breadcrumb-button text-black hover:text-slate-400"
           >
             CONTACT
