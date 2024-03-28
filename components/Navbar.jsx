@@ -252,21 +252,21 @@ function Navbar() {
           </a>
           /
           <button
-            onClick={(e) => handleNavClick("about", e)}
+            onClick={(e) => handleNavClick("#about", e)}
             className="breadcrumb-button text-black hover:text-slate-400"
           >
             ABOUT
           </button>
           /
           <button
-            onClick={(e) => handleNavClick("projects", e)}
+            onClick={(e) => handleNavClick("#projects", e)}
             className="breadcrumb-button text-black hover:text-slate-400"
           >
             PROJECTS
           </button>
           /
           <button
-            onClick={(e) => handleNavClick("contact", e)}
+            onClick={(e) => handleNavClick("#contact", e)}
             className="breadcrumb-button text-black hover:text-slate-400"
           >
             CONTACT
