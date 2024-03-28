@@ -108,7 +108,7 @@ function Navbar() {
   };
 
   const copyAlert = () => {
-    copyToClipboard("9175003239");
+    copyToClipboard("+919175003239");
   };
 
   // const copyToClipboard = async (text) => {
